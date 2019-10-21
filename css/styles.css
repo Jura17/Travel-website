@@ -1,0 +1,48 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  font-family: sans-serif;
+  background: #d69696;
+}
+
+.navigation{
+  width: 90%;
+  margin: auto;
+}
+
+.login{
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+.main-container{
+  padding: 2em;
+  background: #fff;
+  margin: auto;
+  width: 90%;
+  text-align: center;
+}
+
+.main-container h1{
+  font-size: 3rem;
+  margin-bottom: 6rem;
+}
+
+.main-container input{
+  width: 75%;
+  background: #f2f2f2;
+  border-style: hidden;
+  font-size: 4rem;
+  margin-bottom: 4rem;
+  padding: 3rem 0;
+}
+
+.main-container input[type="text"]{
+  width: 90%;
+  background: #fff;
+  font-size: 3rem;
+  font-style: italic;
+  text-align: center;
+}
