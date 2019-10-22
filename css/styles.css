@@ -4,45 +4,59 @@
 
 body{
   font-family: sans-serif;
-  background: #d69696;
+  margin: 0;
+  padding: 0;
 }
 
-.navigation{
-  width: 90%;
-  margin: auto;
+#logo{
+  width: 100%;
+  display: block;
+}
+
+#landing-page-img{
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: -1;
+  object-fit: contain;
+  height: 100vh;
+}
+
+#login-glyph{
+  margin-right: 0.2em;
 }
 
 .login{
-  font-size: 1.5rem;
+  font-size: 1.5em;
   text-align: left;
 }
 
 .main-container{
   padding: 2em;
-  background: #fff;
   margin: auto;
   width: 90%;
   text-align: center;
 }
 
 .main-container h1{
-  font-size: 3rem;
-  margin-bottom: 6rem;
+  font-size: 4em;
+  margin-bottom: 2em;
 }
 
 .main-container input{
   width: 75%;
-  background: #f2f2f2;
+  background: #81c3ff;
+  color: #f2f2f2;
+  border-radius: 25px;
   border-style: hidden;
-  font-size: 4rem;
-  margin-bottom: 4rem;
-  padding: 3rem 0;
+  font-size: 3.5em;
+  margin-bottom: 1em;
+  padding: 1em 0;
 }
 
 .main-container input[type="text"]{
   width: 90%;
-  background: #fff;
-  font-size: 3rem;
+  font-size: 2em;
   font-style: italic;
   text-align: center;
 }
