@@ -7,22 +7,29 @@
   <head>
     <meta charset="utf-8">
     <title>Welcome to Nihon Ni</title>
-    <link rel="stylesheet" href="css/styles.css">
-
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
   </head>
   <body>
-    <img id="landing-page-img" src="img/landing.jpg" alt="">
-    <nav class="navbar">
-      <img id="logo" src="img/logo-1.svg" alt="Logo of the app">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Japan now</a></li>
-        <li><a href="#">Stories</a></li>
-        <li><a href="#">About</a></li>
-      </ul>
+    <!-- <img id="landing-page-img" src="img/landing.jpg" alt=""> -->
+    <nav>
+      <div class="navbar">
+        <div class="brand-logo"><img id="logo" src="img/logo-1.svg" alt="Logo of the app"></div>
+        <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Japan now</a></li>
+            <li><a href="#">Stories</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+        </div>
+      </div>
       <div class="login">
-          <h2><span id="login-glyph"><img src="https://img.icons8.com/ios-glyphs/60/000000/user--v1.png"></span>Login/Sign Up</h2>
-
+        <h2><span id="login-glyph"><img src="https://img.icons8.com/ios-glyphs/60/000000/user--v1.png"></span>Login/Sign Up</h2>
       </div>
     </nav>
     <div class="main-container">
@@ -40,6 +47,6 @@
         <input type="text" name="search" placeholder="Look up a story...">
       </div>
     </div>
-    <script src="js/main.js" charset="utf-8"></script>
+    <!-- <script src="js/main.js" charset="utf-8"></script> -->
   </body>
 </html>
