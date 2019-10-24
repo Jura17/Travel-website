@@ -13,7 +13,8 @@
     <!-- <img id="landing-page-img" src="img/landing.jpg" alt=""> -->
     <nav>
       <div class="navbar">
-        <div class="brand-logo"><img id="logo" src="img/logo-1.svg" alt="Logo of the app"></div>
+        <div class="brand-logo"><strong>HELLO<br>NIHON</strong></div>
+        <!-- <img id="logo" src="img/logo-1.svg" alt="Logo of the app"> -->
         <a href="#" class="toggle-button">
           <span class="bar"></span>
           <span class="bar"></span>
@@ -29,7 +30,7 @@
         </div>
       </div>
       <div class="login">
-        <h2><span id="login-glyph"><img src="https://img.icons8.com/ios-glyphs/60/000000/user--v1.png"></span>Login/Sign Up</h2>
+        <p><span id="login-glyph"><img src="https://img.icons8.com/ios-glyphs/30/000000/user--v1.png"></span>Login/Sign Up</p>
       </div>
     </nav>
     <div class="main-container">
@@ -47,6 +48,6 @@
         <input type="text" name="search" placeholder="Look up a story...">
       </div>
     </div>
-    <!-- <script src="js/main.js" charset="utf-8"></script> -->
+    <script src="js/main.js" charset="utf-8"></script>
   </body>
 </html>
