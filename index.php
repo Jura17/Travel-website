@@ -6,7 +6,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Welcome to Nihon Ni</title>
+    <title>Hello Nihon!</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
   </head>
   <body>
@@ -39,13 +39,7 @@
         <input type="button" name="new" value="Tell your story">
       </div>
       <div>
-        <input type="button" name="recent" value="Most recent story">
-      </div>
-      <div>
-        <input type="button" name="popular" value="Most popular story">
-      </div>
-      <div>
-        <input type="text" name="search" placeholder="Look up a story...">
+        <input type="button" name="recent" value="Browse stories">
       </div>
     </div>
     <script src="js/main.js" charset="utf-8"></script>
