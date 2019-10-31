@@ -129,7 +129,7 @@ body{
   margin-bottom: 2em;
 }
 
-.landing-input{
+.main-container input{
   width: 40%;
   background: #81c3ff;
   color: #f2f2f2;
@@ -139,7 +139,7 @@ body{
   padding: 1em 0;
 }
 
-.landing-input:hover{
+.main-container input:hover{
   background: #fc5347;
   cursor: pointer;
 }
