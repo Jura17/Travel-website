@@ -4,7 +4,7 @@
 
 <div class="main-container">
   <h2>Sign Up</h2>
-  <form action="signup.inc.php" method="POST">
+  <form action="includes/signup.inc.php" method="POST">
     <div>
       <input type="text" name="uid" placeholder="Username">
     </div>
