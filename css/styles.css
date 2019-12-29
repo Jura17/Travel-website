@@ -8,6 +8,15 @@ body{
   padding: 0;
 }
 
+a{
+  text-decoration: none;
+  color: #00f;
+}
+
+.brand-logo a{
+  color: #fff;
+}
+
 .login{
   font-size: 1em;
   font-weight: bold;
@@ -66,7 +75,6 @@ body{
 }
 
 @media (max-width: 550px) {
-
   .toggle-button{
     display: flex;
   }

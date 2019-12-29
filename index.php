@@ -1,6 +1,7 @@
 <?php
   require "header.php";
  ?>
+
 <main>
  <div class="main-container">
    <h1>Connecting Japan travelers all around the world</h1>

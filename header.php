@@ -15,14 +15,18 @@
      <header>
        <nav>
          <div class="navbar">
-           <div class="brand-logo"><strong>HELLO<br>NIHON</strong></div>
+           <div class="brand-logo"><a href="index.php"<strong>HELLO<br>NIHON</strong></a></div>
            <!-- <img id="logo" src="img/logo-1.svg" alt="Logo of the app"> -->
+           <div class="login">
+             <p><span id="login-glyph"><img src="https://img.icons8.com/ios-glyphs/30/000000/user--v1.png"></span><a href="signup.php">User Account</a></p>
+           </div>
            <a href="#" class="toggle-button">
              <span class="bar"></span>
              <span class="bar"></span>
              <span class="bar"></span>
            </a>
            <div class="navbar-links">
+
              <ul>
                <li><a href="index.php">Home</a></li>
                <li><a href="#">Japan now</a></li>
@@ -30,9 +34,6 @@
                <li><a href="#">About</a></li>
              </ul>
            </div>
-         </div>
-         <div class="login">
-           <p><span id="login-glyph"><img src="https://img.icons8.com/ios-glyphs/30/000000/user--v1.png"></span><a href="signup.php">Sign Up</a></p>
          </div>
        </nav>
      </header>
