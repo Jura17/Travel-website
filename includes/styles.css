@@ -3,6 +3,17 @@
   font-family: 'Roboto', sans-serif;
 }
 
+a{
+  text-decoration: none;
+  color: #fff;
+
+}
+
+.brand-logo{
+  margin-left: .5em;
+  font-weight: bold;
+}
+
 body{
   margin: 0;
   padding: 0;
@@ -10,10 +21,13 @@ body{
 
 .login{
   font-size: 1em;
-  font-weight: bold;
 }
 
-.login:hover{
+.login a{
+  color: #fff;
+}
+
+.login a:hover{
   color: #81c3ff;
 }
 
@@ -113,10 +127,10 @@ body{
   height: 100vh;
 }
 
-#login-glyph{
-  margin-right: 0.2em;
+#login-glyph img{
+  position: relative;
+  top: 8px;
 }
-
 
 .main-container{
   padding: 2em;
@@ -129,7 +143,7 @@ body{
   margin-bottom: 2em;
 }
 
-.main-container input{
+.main-container input[type="button"]{
   width: 40%;
   background: #81c3ff;
   color: #f2f2f2;
@@ -139,7 +153,7 @@ body{
   padding: 1em 0;
 }
 
-.main-container input:hover{
+.main-container input[type="button"]:hover{
   background: #fc5347;
   cursor: pointer;
 }
@@ -158,7 +172,13 @@ body{
   }
 }
 
-.main-container input[type="text"]{
+.main-container input[type="text"],
+.main-container input[type="password"]{
   font-style: italic;
   text-align: center;
+}
+
+.error-message{
+  color: #f00;
+  font-weight: bold;
 }

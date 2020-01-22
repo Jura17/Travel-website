@@ -8,7 +8,7 @@
      <meta charset="utf-8">
      <title>Hello Nihon!</title>
      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
-     <link rel="stylesheet" type="text/css" href="css/styles.css">
+     <link rel="stylesheet" type="text/css" href="includes/styles.css">
    </head>
    <body>
      <!-- <img id="landing-page-img" src="img/landing.jpg" alt=""> -->
@@ -18,7 +18,23 @@
            <div class="brand-logo"><a href="index.php"<strong>HELLO<br>NIHON</strong></a></div>
            <!-- <img id="logo" src="img/logo-1.svg" alt="Logo of the app"> -->
            <div class="login">
-             <p><span id="login-glyph"><img src="https://img.icons8.com/ios-glyphs/30/000000/user--v1.png"></span><a href="signup.php">User Account</a></p>
+             <p><span id="login-glyph"><img src="https://img.icons8.com/ios-glyphs/30/000000/user--v1.png"></span><a href="signup.php">
+               <!-- needs a check if user is logged in or not. When logged in send user to profile instead of signup.php -->
+               <?php
+               if(isset($_SESSION['userId'])){
+                  echo $_SESSION['userUid'];
+               }else{
+                 echo 'Signup/Login';
+               }
+               ?>
+             </a></p>
+            <?php
+            if(isset($_SESSION['userId'])){
+             echo '<form class="logout" action="includes/logout.inc.php" method="POST">
+              <button type="submit" name="logout-submit">Logout</button>
+             </form>';
+           }
+             ?>
            </div>
            <a href="#" class="toggle-button">
              <span class="bar"></span>
