@@ -1,5 +1,6 @@
 <?php
   require "header.php";
+  require 'includes/dbh.inc.php';
 ?>
 
 <?php
@@ -12,6 +13,25 @@
             This is your profile
             <?php
             echo "<span styles='color: #81c3ff;'>".$_SESSION['userUid']."</span>";
+            echo "<h2>Your stories:</h2>";
+
+            $sql = "SELECT * FROM posts WHERE id_author=".$_SESSION['userId'];
+            $result = mysqli_query($conn, $sql);
+            $resultCheck = mysqli_num_rows($result);
+
+            if($resultCheck > 0){
+              while($row = $result->fetch_assoc()){
+                echo "<div><strong>".$row["title"]."</strong>";
+                echo "<em> by ".$_SESSION["userUid"]."</em>";
+                echo " Created: ".$row["created_at"];
+                echo " &#9829;: ".$row["likes"];
+                echo "<div>".$row["article"]."</div>";
+                echo "</div>";
+              }
+            }else{
+              echo "You haven't shared any stories with us yet.";
+            }
+
             ?>
           </h1>
         </section>

@@ -18,7 +18,14 @@
            <div class="brand-logo"><a href="index.php"<strong>HELLO<br>NIHON</strong></a></div>
            <!-- <img id="logo" src="img/logo-1.svg" alt="Logo of the app"> -->
            <div class="login">
-             <p><span id="login-glyph"><img src="https://img.icons8.com/ios-glyphs/30/000000/user--v1.png"></span><a href="signup.php">
+             <p><span id="login-glyph"><img src="https://img.icons8.com/ios-glyphs/30/000000/user--v1.png"></span>
+               <?php
+               if(!isset($_SESSION['userId'])){
+                 echo "<a href='signup.php'>";
+               }else{
+                 echo "<a href='user_profile.php'>";
+               }
+                 ?>
                <!-- needs a check if user is logged in or not. When logged in send user to profile instead of signup.php -->
                <?php
                if(isset($_SESSION['userId'])){
