@@ -6,10 +6,11 @@
  <div class="main-container">
    <section>
      <?php
-        if(isset($_SESSION['userId'])){
-          echo '<p class="login-status">You are logged in!</p>';
-        }else{
-          echo '<p class="login-status">You are logged out!</p>';
+        $fullUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+        if(strpos($fullUrl, "login=success") == true){
+          echo "<p>Welcome back, ".$_SESSION['userUid']."!</p>";
+        }else if(strpos($fullUrl, "signup=success") == true){
+          echo "<p>Successfully signed up! Welcome to the gang ".$_SESSION['userUid']."!";
         }
      ?>
    </section>

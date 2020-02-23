@@ -8,7 +8,7 @@ if(isset($_POST['login-submit'])){
 
   // check if user didn't leave fields empty. If so, go back to login screen
   if(empty($mailuid) || empty($password)){
-    header("Location: ../signup.php?error=emptyfields");
+    header("Location: ../signup.php?loginError=emptyfields");
     exit();
   }else{
     // sql query: Select everything from the users table where the uidUsers or emailUsers is equal to $mailuid
@@ -17,7 +17,7 @@ if(isset($_POST['login-submit'])){
     $stmt = mysqli_stmt_init($conn);
     // check if the statement works together with the database connection
     if(!mysqli_stmt_prepare($stmt, $sql)){
-      header("Location: ../signup.php?error=sqlError");
+      header("Location: ../signup.php?loginError=sqlError");
       exit();
     }else{
       // bind the data input by the user to the statement
@@ -31,7 +31,7 @@ if(isset($_POST['login-submit'])){
         // hash the password the user typed in and compare it to the hashed password stored in the database
         $pwdCheck = password_verify($password, $row['pwdUsers']);
         if($pwdCheck == false){
-          header("Location: ../signup.php?error=wrongPwd");
+          header("Location: ../signup.php?loginError=wrongPwd");
           exit();
         }else if($pwdCheck == true){
           session_start();
@@ -42,11 +42,11 @@ if(isset($_POST['login-submit'])){
           header("Location: ../index.php?login=success");
           exit();
         }else{
-          header("Location ../signup.php?error=wrongPwd");
+          header("Location ../signup.php?loginError=wrongPwd");
           exit();
         }
       }else{
-        header("Location: ../signup.php?error=noUser");
+        header("Location: ../signup.php?loginError=noUser");
         exit();
       }
     }

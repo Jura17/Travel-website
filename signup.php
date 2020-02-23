@@ -9,6 +9,14 @@ if(isset($_GET['error'])){
     echo '<p class="error-message">Please fill in all fields!</p>';
   }elseif($_GET['error'] == 'invalidEmailUid'){
     echo '<p class="error-message">Username and Email are invalid!</p>';
+  }elseif($_GET['error'] == 'invalidEmail'){
+    echo '<p class="error-message">Please enter a valid Email address!</p>';
+  }elseif($_GET['error'] == 'invalidUid'){
+    echo '<p class="error-message">Please enter a valid username!</p>';
+  }elseif($_GET['error'] == 'passwordCheck'){
+    echo "<p class='error-message'>The passwords don't match!</p>";
+  }else{
+    echo "<p class='error-message'>An error occured</p>";
   }
 }
 
@@ -49,8 +57,21 @@ if(isset($_GET['error'])){
     </div>
     <button type="submit" name="signup-submit">Sign Up</button>
   </form>
-  <h4 style="margin-top: 3em;">Do you already have an account?</h4>
-    <h2>Login</h2>
+  <h4 style="margin-top: 3em;">Do you already have an account?</h4>';
+
+  if(isset($_GET['loginError'])){
+    if($_GET['loginError'] == 'emptyfields'){
+      echo '<p class="error-message">Please fill in all fields!</p>';
+    }elseif($_GET['loginError'] == 'noUser'){
+      echo '<p class="error-message">User not found!</p>';
+    }elseif($_GET['loginError'] == 'wrongPwd'){
+      echo '<p class="error-message">Wrong password!</p>';
+    }elseif($_GET['loginError'] == 'sqlError'){
+      echo "<p class='error-message'>An error occured while trying to login</p>";
+    }
+  }
+
+  echo '<h2>Login</h2>
     <form action="includes/login.inc.php" method="POST">
       <div>
         <input type="text" name="mailuid" placeholder="Email/Username">

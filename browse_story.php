@@ -7,7 +7,7 @@
     <section>
       <?php
         if(isset($_SESSION['userId'])){
-          echo '<h1>Welcome</h1><p>Read about other travelers journeys</p>';
+          echo "<h1>Welcome</h1><p>Read about other traveler's journeys</p>";
         }else{
           header("Location: signup.php?error=notLoggedIn");
           exit();

@@ -21,9 +21,10 @@
 
             if($resultCheck > 0){
               while($row = mysqli_fetch_assoc($result)){
-                echo "<div><strong>".$row["title"]."</strong>";
+                echo "<div class='blog-post'><strong>".$row["title"]."</strong>";
                 echo "<em> by ".$_SESSION["userUid"]."</em>";
                 echo " Created: ".$row["created_at"];
+                echo " Views: ".$row["views"];
                 echo " &#9829;: ".$row["likes"];
                 echo "<div>".$row["article"]."</div>";
                 echo "</div>";
