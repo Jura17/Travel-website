@@ -48,13 +48,31 @@ if(isset($_POST['signup-submit'])){
           $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
           mysqli_stmt_bind_param($stmt, "sss", $username, $email, $hashedPwd);
           mysqli_stmt_execute($stmt);
-          header("Location:../index.php?signup=success");
-          exit();
         }
       }
     }
   }
   mysqli_stmt_close($stmt);
+
+  // automatic login after signup
+  $sql = "SELECT * FROM users WHERE uidUsers='$username'";
+  $result = mysqli_query($conn, $sql);
+  $resultCheck = mysqli_num_rows($result);
+
+  if($resultCheck < 1){
+    header("Location: ../signup.php?error=somethingWentWrong");
+    exit();
+  }else if($resultCheck > 0){
+    if($row = mysqli_fetch_assoc($result)){
+      session_start();
+      $_SESSION['userId'] = $row['id'];
+      $_SESSION['userUid'] = $row['uidUsers'];
+      $_SESSION['userEmail'] = $row['emailUsers'];
+      header("Location:../index.php?signup=success");
+      exit();
+    }
+  }
+
   mysqli_close($conn);
 }else{
   header("Location: ../signup.php");

@@ -20,7 +20,7 @@
             $resultCheck = mysqli_num_rows($result);
 
             if($resultCheck > 0){
-              while($row = $result->fetch_assoc()){
+              while($row = mysqli_fetch_assoc($result)){
                 echo "<div><strong>".$row["title"]."</strong>";
                 echo "<em> by ".$_SESSION["userUid"]."</em>";
                 echo " Created: ".$row["created_at"];
