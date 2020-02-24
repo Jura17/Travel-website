@@ -14,6 +14,12 @@
             <?php
             echo "<span styles='color: #81c3ff;'>".$_SESSION['userUid']."</span>";
             echo "<h2>Your stories:</h2>";
+            echo " <p>Is admin: ";
+            if($_SESSION["isAdmin"]){
+              echo " Yes</p>";
+            }else{
+              echo " No</p>";
+            }
 
             $sql = "SELECT * FROM posts WHERE id_author=".$_SESSION['userId'];
             $result = mysqli_query($conn, $sql);

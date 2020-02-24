@@ -38,6 +38,7 @@ if(isset($_POST['login-submit'])){
           $_SESSION['userId'] = $row['id'];
           $_SESSION['userUid'] = $row['uidUsers'];
           $_SESSION['userEmail'] = $row['emailUsers'];
+          $_SESSION['isAdmin'] = $row['isAdmin'];
 
           header("Location: ../index.php?login=success");
           exit();
