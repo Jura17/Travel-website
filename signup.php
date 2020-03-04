@@ -15,6 +15,8 @@ if(isset($_GET['error'])){
     echo '<p class="error-message">Please enter a valid username!</p>';
   }elseif($_GET['error'] == 'passwordCheck'){
     echo "<p class='error-message'>The passwords don't match!</p>";
+  }elseif($_GET['error'] == 'notLoggedIn'){
+    echo "<p class='error-message'>Please login or sign up first!</p>";
   }else{
     echo "<p class='error-message'>An error occured</p>";
   }

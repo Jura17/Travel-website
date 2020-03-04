@@ -178,6 +178,14 @@ body{
   text-align: center;
 }
 
+.user-profile-link{
+  display: inline-block;
+}
+
+.logout{
+  display: inline-block;
+}
+
 .error-message{
   margin: 0 auto;
   margin-bottom: 3em;

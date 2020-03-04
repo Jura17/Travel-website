@@ -21,6 +21,8 @@
               echo " No</p>";
             }
 
+            // list all posts both published and not-published and sort them by date of creation
+            // enlarge/open article on click
             $sql = "SELECT * FROM posts WHERE id_author=".$_SESSION['userId'];
             $result = mysqli_query($conn, $sql);
             $resultCheck = mysqli_num_rows($result);
