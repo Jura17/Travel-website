@@ -25,10 +25,11 @@ body{
 
 .login a{
   color: #fff;
+  padding: 1rem;
 }
 
 .login a:hover{
-  color: #81c3ff;
+  background: #555;
 }
 
 .navbar{
@@ -80,7 +81,6 @@ body{
 }
 
 @media (max-width: 550px) {
-
   .toggle-button{
     display: flex;
   }
@@ -186,6 +186,21 @@ body{
   display: inline-block;
 }
 
+
+.logout-button{
+  background-color: #333;
+  border-color: #333;
+  border-style: none;
+  padding: 1rem;
+  font-size: 1em;
+  color: #fff;
+  margin-left: 1em;
+}
+
+.logout-button:hover{
+  background: #555;
+}
+
 .error-message{
   margin: 0 auto;
   margin-bottom: 3em;
@@ -213,4 +228,18 @@ body{
   margin: 0 auto;
   width: 70%;
   margin-bottom: 2em;
+}
+
+#tell-story-container{
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+#article-title{
+  display: block;
+  width: 200px;
+}
+
+#article-content{
+  display: block;
 }

@@ -84,7 +84,7 @@ if(isset($_GET['error'])){
       <button type="submit" name="login-submit">Login</button>
     </form>';
   }else{
-    echo 'You are already logged in and not supposed to be here!';
+    header('Location: index.php');
   }
 
     ?>
