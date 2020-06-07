@@ -44,7 +44,7 @@ if(isset($_GET['error'])){
 
   if(!isset($_SESSION['userId'])){
   echo '<h2>Sign Up</h2>
-  <form action="includes/signup.inc.php" method="POST">
+  <form id="sign-up-form" action="includes/signup.inc.php" method="POST">
     <div>
       <input type="text" name="uid" placeholder="Username">
     </div>
@@ -74,7 +74,7 @@ if(isset($_GET['error'])){
   }
 
   echo '<h2>Login</h2>
-    <form action="includes/login.inc.php" method="POST">
+    <form id="login-form" action="includes/login.inc.php" method="POST">
       <div>
         <input type="text" name="mailuid" placeholder="Email/Username">
       </div>

@@ -80,7 +80,7 @@ body{
   border-radius: 10px;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 768px) {
   .toggle-button{
     display: flex;
   }
@@ -143,9 +143,9 @@ body{
   margin-bottom: 2em;
 }
 
-.main-container input[type="button"]{
+.main-container input[type="button"], .main-container input[type="submit"]{
   width: 40%;
-  background: #81c3ff;
+  background: #60a1dd;
   color: #f2f2f2;
   border-radius: 25px;
   border-style: hidden;
@@ -153,12 +153,12 @@ body{
   padding: 1em 0;
 }
 
-.main-container input[type="button"]:hover{
-  background: #fc5347;
+.main-container input[type="button"]:hover, .main-container input[type="submit"]:hover{
+  background: #81c3ff;
   cursor: pointer;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 768px) {
   .main-container h1{
     font-size: 1.5em;
   }
@@ -167,14 +167,14 @@ body{
     font-size: 0.7em;
   }
 
-  .main-container input{
+  .main-container input[type="button"]{
     width: 100%;
   }
 }
 
 .main-container input[type="text"],
 .main-container input[type="password"]{
-  font-style: italic;
+  /* font-style: italic; */
   text-align: center;
 }
 
@@ -185,7 +185,6 @@ body{
 .logout{
   display: inline-block;
 }
-
 
 .logout-button{
   background-color: #333;
@@ -223,23 +222,58 @@ body{
   background: #0f4;
 }
 
+
 .blog-post{
   text-align: left;
   margin: 0 auto;
-  width: 70%;
+  width: 100%;
   margin-bottom: 2em;
 }
 
+@media (min-width: 992px) {
+  .blog-post{
+    width: 70%;
+  }
+}
+
 #tell-story-container{
-  max-width: 700px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
 #article-title{
-  display: block;
-  width: 200px;
+  max-width: 400px;
 }
 
-#article-content{
+#sign-up-form input, #login-form input, #article-title, #article-content{
+  border: 1px solid #ccc;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+#article-title, #article-content{
   display: block;
+}
+
+#sign-up-form input, #login-form input{
+  margin-bottom: .2em;
+}
+
+#clear-all-btn, #submit-post-btn, #save-article-btn, #publish-article-btn{
+  display: block;
+  width: 100%;
+  margin: 1em auto;
+}
+
+@media (min-width: 600px) {
+  #clear-all-btn, #submit-post-btn, #save-article-btn, #publish-article-btn{
+    display: inline;
+    max-width: 200px;
+    margin: 0 .5em;
+  }
+}
+
+#article-preview{
+  text-align: left;
+  margin-top: 6em;
 }

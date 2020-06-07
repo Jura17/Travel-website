@@ -43,9 +43,10 @@
            <div class="navbar-links">
              <ul>
                <li><a href="index.php">Home</a></li>
+               <li><a href="tell_story.php">Your story</a></li>
+               <li><a href="browse_story.php">Browse</a></li>
                <li><a href="#">Japan now</a></li>
-               <li><a href="browse_story.php">Stories</a></li>
-               <li><a href="#">About</a></li>
+               <li><a href="about.php">About</a></li>
              </ul>
            </div>
          </div>
