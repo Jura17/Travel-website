@@ -20,18 +20,25 @@
                   $result = mysqli_query($conn, $sql);
                   $resultCheck = mysqli_num_rows($result);
 
-                  if($resultCheck > 0){
+                  if($resultCheck > 0){ ?>
+                    <ul class="post-link-list"> <?php
                     while($row = mysqli_fetch_assoc($result)){
-                      if($row["published"]){
-                        echo "<div class='blog-post'><strong>".$row["title"]."</strong>";
-                        echo "<em> by ".$row["uid_author"]."</em>";
-                        echo " Created: ".$row["created_at"];
-                        echo " Views: ".$row["views"];
-                        echo " &#9829;: ".$row["likes"];
-                        echo "<div>".$row["article"]."</div>";
-                        echo "</div>";
+                      if($row["published"]){ ?>
+                        <li> <?php
+                          echo "<a href='post.php?id=" . $row["id_post"] . "'><strong>" . $row["title"] . "</strong>";
+                          echo "<em> by " . $row["uid_author"] ."</em>";
+                          echo " Created: " . $row["created_at"];
+                          echo " Views: " . $row["views"];
+                          echo " &#9829;: " . $row["likes"];
+                          $previewText = nl2br(substr($row["article"],0 , 90));
+                          echo "<div>" . $previewText;
+                          if(strlen($row["article"]) > 90){echo " [...]";}
+                          echo "</div>";
+                          echo "</a>";  ?>
+                        </li> <?php
                       }
                     }
+                    ?> </ul> <?php
                   }else{
                     echo "You haven't shared any stories with us yet.";
                   }

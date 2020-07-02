@@ -1,0 +1,25 @@
+<?php if(isset($_POST['preview-submit'])){ ?>
+<form action="includes/tell_story.inc.php" method="POST">
+<?php
+  $articleTitle = $_POST['article-title'];
+  $articleBody = $_POST['article-body'];
+  if(!empty($articleTitle) && !empty($articleBody)){
+    $_POST['article-title'] = $articleTitle;
+    $_POST['article-body'] = $articleBody;
+ ?>
+    <button class="article-btn" id="save-article-btn" type="submit" name="save-article">Save</button>
+    <button class="article-btn" id="publish-article-btn" type="submit" name="publish-article">Save and publish</button>
+  <?php }else{ ?>
+    <p class="error-message">Please fill in all fields!</p>
+  <?php } ?>
+  </form>
+<?php } ?>
+
+
+echo "<div class='blog-post'><strong>".$row["title"]."</strong>";
+echo "<em> by ".$row["uid_author"]."</em>";
+echo " Created: ".$row["created_at"];
+echo " Views: ".$row["views"];
+echo " &#9829;: ".$row["likes"];
+echo "<div>". nl2br($row["article"]) ."</div>";
+echo "</div>";

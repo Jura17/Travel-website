@@ -4,46 +4,30 @@
 
 <main>
   <div class="main-container">
-    <section>
       <?php
         if(isset($_SESSION['userId'])){
           echo '<h1>Tell us your story here</h1>';
-      ?>
-      <div id="tell-story-container">
-      <form action="tell_story.php" method="POST">
-        <input id="article-title" name="article-title" type="text" placeholder="Title of your story..." required >
-        <label for="article-input-field">
-        <textarea style="width: 100%;" id="article-content" cols="100" rows="20" name="article-input-field" id="article-input-field" placeholder="Your story..." required></textarea><br>
-        <input id="clear-all-btn" class="landing-input" name="clear_all" onclick="Clear_all()" type="button" value="Clear all">
-        <input id="submit-post-btn" class="landing-input" name="article-submit" type="submit" value="Preview">
-      </form>
+       ?>
+        <div class="article-form-container" id="article-form-container">
+          <form class="article-form" id="article-form" action="includes/tell_story.inc.php" method="POST">
+            <input class="article-title" id="article-title" name="article-title" type="text" placeholder="Title of your story..."  >
+            <textarea class="article-body" id="article-body" col="100" rows="20" name="article-body" placeholder="Your story..." ></textarea><br>
+          </form>
 
-      <?php
-        if(isset($_POST['article-submit'])){
-          $articleTitle = $_POST['article-title'];
-          $articleText = $_POST['article-input-field'];
-          if($articleTitle !== "" && $articleText !== ""){
-            $cleanHeading = strip_tags($articleTitle);
-            $cleanText = strip_tags($articleText);
-            echo '<div id="article-preview">';
-            echo '<h2>'.$cleanHeading.'</h2>';
-            echo '<p>'.$cleanText.'</p>';
-            echo '</div>';
-            echo '<form><input id="save-article-btn" type="submit" name="save-article" value="Save">
-                  <input id="publish-article-btn" type="submit" name="publish-article" value="Save and publish"></form>';
+        <?php
+          }else{
+            header("Location: signup.php?error=notLoggedIn");
+            exit();
           }
-        }
-
-      ?>
-
-      <?php
-        }else{
-          header("Location: signup.php?error=notLoggedIn");
-          exit();
-        }
-      ?>
+        ?>
       </div>
-    </section>
+
+    <div class="article-side-panel" id="article-side-panel">
+      <button class="article-btn" id="clear-all-btn" name="clear_all" onclick="Clear_all()">Clear all</button>
+      <button class="article-btn" id="save-article-btn" form="article-form" name="save-article" type="submit">Save draft</button>
+      <button class="article-btn" id="preview-article-btn" form="article-form" name="preview-article" type="submit">Preview</button>
+      <button class="article-btn" id="publish-article-btn" form="article-form" name="publish-article" type="submit">Publish</button>
+    </div>
   </div>
   <script src="js/functions.js" charset="utf-8"></script>
 </main>
